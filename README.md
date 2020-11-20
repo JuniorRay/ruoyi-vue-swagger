@@ -147,7 +147,7 @@ public class OmExamOrderController extends BaseController{
      */
     @PreAuthorize("@ss.hasPermi('checkApplicationForm:examOrder:remove')")
     @Log(title = "检查申请单", businessType = BusinessTypeEnum.DELETE)
-	@DeleteMapping("/{keyIds}")
+    @DeleteMapping("/{keyIds}")
     @ApiOperation("删除检查申请单")
     public Response remove(
             @ApiParam(name = "keyIds", value = "检查申请单ids参数", required = true)
