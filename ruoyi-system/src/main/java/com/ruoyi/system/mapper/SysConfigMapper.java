@@ -1,7 +1,7 @@
 package com.ruoyi.system.mapper;
 
 import java.util.List;
-import com.ruoyi.system.domain.SysConfig;
+import com.ruoyi.system.domain.bean.SysConfig;
 
 /**
  * 参数配置 数据层

@@ -1,7 +1,7 @@
 # 项目相关配置
 ruoyi:
   # 名称
-  name: RuoYi
+  name: JuniorRay
   # 版本
   version: 3.2.0
   # 版权年份

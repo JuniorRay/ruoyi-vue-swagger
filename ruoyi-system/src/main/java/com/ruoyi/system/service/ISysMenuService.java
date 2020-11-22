@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Set;
 import com.ruoyi.common.core.domain.TreeSelect;
 import com.ruoyi.common.core.domain.entity.SysMenu;
-import com.ruoyi.system.domain.vo.RouterVo;
+import com.ruoyi.system.domain.dto.common.RouterDTO;
 
 /**
  * 菜单 业务层
@@ -60,7 +60,7 @@ public interface ISysMenuService
      * @param menus 菜单列表
      * @return 路由列表
      */
-    public List<RouterVo> buildMenus(List<SysMenu> menus);
+    public List<RouterDTO> buildMenus(List<SysMenu> menus);
 
     /**
      * 构建前端所需要树结构

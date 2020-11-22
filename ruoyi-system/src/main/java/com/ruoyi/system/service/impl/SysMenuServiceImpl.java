@@ -8,6 +8,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import com.ruoyi.system.domain.dto.common.RouterDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ruoyi.common.constant.UserConstants;
@@ -17,8 +19,7 @@ import com.ruoyi.common.core.domain.entity.SysRole;
 import com.ruoyi.common.core.domain.entity.SysUser;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.StringUtils;
-import com.ruoyi.system.domain.vo.MetaVo;
-import com.ruoyi.system.domain.vo.RouterVo;
+import com.ruoyi.system.domain.dto.common.MetaDTO;
 import com.ruoyi.system.mapper.SysMenuMapper;
 import com.ruoyi.system.mapper.SysRoleMapper;
 import com.ruoyi.system.mapper.SysRoleMenuMapper;
@@ -140,17 +141,17 @@ public class SysMenuServiceImpl implements ISysMenuService
      * @return 路由列表
      */
     @Override
-    public List<RouterVo> buildMenus(List<SysMenu> menus)
+    public List<RouterDTO> buildMenus(List<SysMenu> menus)
     {
-        List<RouterVo> routers = new LinkedList<RouterVo>();
+        List<RouterDTO> routers = new LinkedList<RouterDTO>();
         for (SysMenu menu : menus)
         {
-            RouterVo router = new RouterVo();
+            RouterDTO router = new RouterDTO();
             router.setHidden("1".equals(menu.getVisible()));
             router.setName(getRouteName(menu));
             router.setPath(getRouterPath(menu));
             router.setComponent(getComponent(menu));
-            router.setMeta(new MetaVo(menu.getMenuName(), menu.getIcon(), StringUtils.equals("1", menu.getIsCache())));
+            router.setMeta(new MetaDTO(menu.getMenuName(), menu.getIcon(), StringUtils.equals("1", menu.getIsCache())));
             List<SysMenu> cMenus = menu.getChildren();
             if (!cMenus.isEmpty() && cMenus.size() > 0 && UserConstants.TYPE_DIR.equals(menu.getMenuType()))
             {
@@ -160,12 +161,12 @@ public class SysMenuServiceImpl implements ISysMenuService
             }
             else if (isMeunFrame(menu))
             {
-                List<RouterVo> childrenList = new ArrayList<RouterVo>();
-                RouterVo children = new RouterVo();
+                List<RouterDTO> childrenList = new ArrayList<RouterDTO>();
+                RouterDTO children = new RouterDTO();
                 children.setPath(menu.getPath());
                 children.setComponent(menu.getComponent());
                 children.setName(StringUtils.capitalize(menu.getPath()));
-                children.setMeta(new MetaVo(menu.getMenuName(), menu.getIcon(), StringUtils.equals("1", menu.getIsCache())));
+                children.setMeta(new MetaDTO(menu.getMenuName(), menu.getIcon(), StringUtils.equals("1", menu.getIsCache())));
                 childrenList.add(children);
                 router.setChildren(childrenList);
             }

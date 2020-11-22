@@ -1,7 +1,7 @@
 package com.ruoyi.system.service;
 
 import java.util.List;
-import com.ruoyi.system.domain.SysOperLog;
+import com.ruoyi.system.domain.bean.SysOperLog;
 
 /**
  * 操作日志 服务层

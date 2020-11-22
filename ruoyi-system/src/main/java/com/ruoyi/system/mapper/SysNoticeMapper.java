@@ -1,7 +1,7 @@
 package com.ruoyi.system.mapper;
 
 import java.util.List;
-import com.ruoyi.system.domain.SysNotice;
+import com.ruoyi.system.domain.bean.SysNotice;
 
 /**
  * 通知公告表 数据层
