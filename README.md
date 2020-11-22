@@ -202,9 +202,8 @@ public class SysDeptController extends BaseController{
     @GetMapping("/list")
     @ApiOperation("查询部门列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "当前页码" , paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , paramType = "query", required = false),
-
+            @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<SysDept> list(@ModelAttribute SysDept sysDept){
         startPage();

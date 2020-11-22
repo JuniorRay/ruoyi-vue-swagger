@@ -1,19 +1,19 @@
 package com.ruoyi.quartz.controller;
 
-import java.util.List;
-
-import com.ruoyi.common.core.domain.Response;
-import io.swagger.annotations.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.*;
 import com.ruoyi.common.annotation.Log;
 import com.ruoyi.common.core.controller.BaseController;
+import com.ruoyi.common.core.domain.Response;
 import com.ruoyi.common.core.page.ResponsePageInfo;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.common.utils.poi.ExcelUtil;
 import com.ruoyi.quartz.domain.SysJobLog;
 import com.ruoyi.quartz.service.ISysJobLogService;
+import io.swagger.annotations.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * 调度日志操作处理
@@ -35,9 +35,8 @@ public class SysJobLogController extends BaseController
     @GetMapping("/list")
     @ApiOperation("查询定时任务调度日志列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "当前页码" , paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , paramType = "query", required = false),
-
+            @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<SysJobLog> list(@ModelAttribute SysJobLog sysJobLog)
     {

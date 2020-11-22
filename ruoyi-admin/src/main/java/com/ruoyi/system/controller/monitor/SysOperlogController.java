@@ -32,9 +32,8 @@ public class SysOperlogController extends BaseController
     @GetMapping("/list")
     @ApiOperation("查询操作日志记录列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "当前页码" , paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , paramType = "query", required = false),
-
+            @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<SysOperLog> list(@ModelAttribute SysOperLog operLog)
     {

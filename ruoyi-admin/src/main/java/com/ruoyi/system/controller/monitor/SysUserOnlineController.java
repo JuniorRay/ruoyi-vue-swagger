@@ -41,9 +41,8 @@ public class SysUserOnlineController extends BaseController
     @GetMapping("/list")
     @ApiOperation("查询在线用户监控列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "当前页码" , paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , paramType = "query", required = false),
-
+            @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<SysUserOnline> list(
             @ApiParam(name = "ipaddr", value = "ip地址")

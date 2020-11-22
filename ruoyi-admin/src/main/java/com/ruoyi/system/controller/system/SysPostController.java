@@ -1,23 +1,23 @@
 package com.ruoyi.system.controller.system;
 
-import java.util.List;
-
-import com.ruoyi.common.core.domain.Response;
-import com.ruoyi.common.core.domain.ResponseEnum;
-import io.swagger.annotations.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
 import com.ruoyi.common.annotation.Log;
 import com.ruoyi.common.constant.UserConstants;
 import com.ruoyi.common.core.controller.BaseController;
+import com.ruoyi.common.core.domain.Response;
+import com.ruoyi.common.core.domain.ResponseEnum;
 import com.ruoyi.common.core.page.ResponsePageInfo;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.poi.ExcelUtil;
 import com.ruoyi.system.domain.SysPost;
 import com.ruoyi.system.service.ISysPostService;
+import io.swagger.annotations.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * 岗位信息操作处理
@@ -39,9 +39,8 @@ public class SysPostController extends BaseController
     @GetMapping("/list")
     @ApiOperation("获取岗位列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "当前页码" , paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , paramType = "query", required = false),
-
+            @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<SysPost> list(@ModelAttribute SysPost post)
     {

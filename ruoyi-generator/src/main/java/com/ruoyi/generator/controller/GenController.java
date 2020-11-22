@@ -1,18 +1,5 @@
 package com.ruoyi.generator.controller;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
-import javax.servlet.http.HttpServletResponse;
-
-import com.ruoyi.generator.dto.GenTableInfoDTO;
-import com.ruoyi.generator.dto.GenTableNameDTO;
-import io.swagger.annotations.*;
-import org.apache.commons.io.IOUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
 import com.ruoyi.common.annotation.Log;
 import com.ruoyi.common.core.controller.BaseController;
 import com.ruoyi.common.core.domain.Response;
@@ -21,8 +8,21 @@ import com.ruoyi.common.core.text.Convert;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.generator.domain.GenTable;
 import com.ruoyi.generator.domain.GenTableColumn;
+import com.ruoyi.generator.dto.GenTableInfoDTO;
+import com.ruoyi.generator.dto.GenTableNameDTO;
 import com.ruoyi.generator.service.IGenTableColumnService;
 import com.ruoyi.generator.service.IGenTableService;
+import io.swagger.annotations.*;
+import org.apache.commons.io.IOUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 代码生成 操作处理
@@ -47,9 +47,8 @@ public class GenController extends BaseController
     @GetMapping("/list")
     @ApiOperation("查询代码生成列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "当前页码" , paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , paramType = "query", required = false),
-
+            @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<GenTable> genList(@ModelAttribute GenTable genTable)
     {
@@ -84,9 +83,8 @@ public class GenController extends BaseController
     @GetMapping("/db/list")
     @ApiOperation("查询数据库列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "当前页码" , paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , paramType = "query", required = false),
-
+            @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<GenTable> dataList(@ModelAttribute GenTable genTable)
     {
@@ -102,9 +100,8 @@ public class GenController extends BaseController
     @GetMapping(value = "/column/{talbleId}")
     @ApiOperation("查询数据表字段列表")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "pageNum",value = "当前页码" , paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , paramType = "query", required = false),
-
+            @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<GenTableColumn> columnList(
             @ApiParam(name = "tableId", value = "业务表id")
