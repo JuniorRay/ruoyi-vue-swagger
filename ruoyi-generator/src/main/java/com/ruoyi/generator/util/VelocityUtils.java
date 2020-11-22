@@ -146,7 +146,7 @@ public class VelocityUtils
 
         if (template.contains("domain.java.vm"))
         {
-            fileName = StringUtils.format("{}/domain/bean/{}.java", javaPath, className);
+            fileName = StringUtils.format("{}/domain/{}.java", javaPath, className);
         }
         else if (template.contains("mapper.java.vm"))
         {

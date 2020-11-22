@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import com.ruoyi.common.core.domain.Response;
 import com.ruoyi.common.core.domain.ResponseEnum;
-import com.ruoyi.system.domain.dto.system.UserInfoDetailDTO;
+import com.ruoyi.system.dto.system.UserInfoDetailDTO;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

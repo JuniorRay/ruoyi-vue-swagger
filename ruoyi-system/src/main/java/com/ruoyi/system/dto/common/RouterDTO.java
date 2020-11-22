@@ -1,4 +1,4 @@
-package com.ruoyi.system.domain.dto.common;
+package com.ruoyi.system.dto.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;

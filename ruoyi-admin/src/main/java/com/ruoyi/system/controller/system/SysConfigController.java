@@ -10,7 +10,7 @@ import com.ruoyi.common.core.page.ResponsePageInfo;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.poi.ExcelUtil;
-import com.ruoyi.system.domain.bean.SysConfig;
+import com.ruoyi.system.domain.SysConfig;
 import com.ruoyi.system.service.ISysConfigService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;

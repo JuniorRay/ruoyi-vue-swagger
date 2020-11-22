@@ -9,7 +9,7 @@ import com.ruoyi.common.core.page.ResponsePageInfo;
 import com.ruoyi.common.core.redis.RedisCache;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.common.utils.StringUtils;
-import com.ruoyi.system.domain.bean.SysUserOnline;
+import com.ruoyi.system.domain.SysUserOnline;
 import com.ruoyi.system.service.ISysUserOnlineService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;

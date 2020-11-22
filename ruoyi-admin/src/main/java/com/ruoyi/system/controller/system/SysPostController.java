@@ -16,7 +16,7 @@ import com.ruoyi.common.core.page.ResponsePageInfo;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.common.utils.SecurityUtils;
 import com.ruoyi.common.utils.poi.ExcelUtil;
-import com.ruoyi.system.domain.bean.SysPost;
+import com.ruoyi.system.domain.SysPost;
 import com.ruoyi.system.service.ISysPostService;
 
 /**

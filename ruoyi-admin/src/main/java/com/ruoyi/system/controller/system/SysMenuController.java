@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ruoyi.common.core.domain.ResponseEnum;
 import com.ruoyi.common.core.domain.TreeSelect;
-import com.ruoyi.system.domain.dto.system.MenuDTO;
+import com.ruoyi.system.dto.system.MenuDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

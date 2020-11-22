@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ruoyi.common.core.domain.Response;
-import com.ruoyi.system.domain.dto.common.UploadFileDTO;
+import com.ruoyi.system.dto.common.UploadFileDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

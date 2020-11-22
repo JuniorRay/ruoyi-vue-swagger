@@ -6,7 +6,7 @@ import com.ruoyi.common.core.domain.Response;
 import com.ruoyi.common.core.page.ResponsePageInfo;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.common.utils.poi.ExcelUtil;
-import com.ruoyi.system.domain.bean.SysOperLog;
+import com.ruoyi.system.domain.SysOperLog;
 import com.ruoyi.system.service.ISysOperLogService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;

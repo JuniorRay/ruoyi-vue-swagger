@@ -177,7 +177,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import com.ruoyi.common.annotation.Log;
 import com.ruoyi.common.core.controller.BaseController;
 import com.ruoyi.common.enums.BusinessTypeEnum;
-import com.ruoyi.system.bean.domain.SysDept;
+import com.ruoyi.system.domain.SysDept;
 import com.ruoyi.system.service.ISysDeptService;
 import com.ruoyi.common.utils.poi.ExcelUtil;
 import com.ruoyi.common.core.page.ResponsePageInfo;

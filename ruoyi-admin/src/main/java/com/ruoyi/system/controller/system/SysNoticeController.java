@@ -6,7 +6,7 @@ import com.ruoyi.common.core.domain.Response;
 import com.ruoyi.common.core.page.ResponsePageInfo;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.common.utils.SecurityUtils;
-import com.ruoyi.system.domain.bean.SysNotice;
+import com.ruoyi.system.domain.SysNotice;
 import com.ruoyi.system.service.ISysNoticeService;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;

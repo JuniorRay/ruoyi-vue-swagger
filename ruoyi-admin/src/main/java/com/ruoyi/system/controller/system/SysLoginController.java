@@ -5,9 +5,9 @@ import java.util.Set;
 
 import com.ruoyi.common.core.domain.Response;
 import com.ruoyi.common.core.domain.model.LoginBodyNoCode;
-import com.ruoyi.system.domain.dto.common.RouterDTO;
-import com.ruoyi.system.domain.dto.system.TokenDTO;
-import com.ruoyi.system.domain.dto.system.UserInfoDTO;
+import com.ruoyi.system.dto.common.RouterDTO;
+import com.ruoyi.system.dto.system.TokenDTO;
+import com.ruoyi.system.dto.system.UserInfoDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

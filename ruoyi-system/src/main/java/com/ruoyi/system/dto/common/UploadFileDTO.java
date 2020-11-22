@@ -1,4 +1,4 @@
-package com.ruoyi.system.domain.dto.common;
+package com.ruoyi.system.dto.common;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

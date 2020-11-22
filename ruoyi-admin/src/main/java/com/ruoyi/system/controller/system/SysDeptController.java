@@ -6,7 +6,7 @@ import java.util.List;
 import com.ruoyi.common.core.domain.Response;
 import com.ruoyi.common.core.domain.ResponseEnum;
 import com.ruoyi.common.core.domain.TreeSelect;
-import com.ruoyi.system.domain.dto.system.RoleDeptDTO;
+import com.ruoyi.system.dto.system.RoleDeptDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

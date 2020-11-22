@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Set;
 import com.ruoyi.common.core.domain.TreeSelect;
 import com.ruoyi.common.core.domain.entity.SysMenu;
-import com.ruoyi.system.domain.dto.common.RouterDTO;
+import com.ruoyi.system.dto.common.RouterDTO;
 
 /**
  * 菜单 业务层

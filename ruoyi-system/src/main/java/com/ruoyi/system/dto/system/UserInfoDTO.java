@@ -1,4 +1,4 @@
-package com.ruoyi.system.domain.dto.system;
+package com.ruoyi.system.dto.system;
 
 import com.ruoyi.common.core.domain.entity.SysUser;
 import io.swagger.annotations.ApiModel;

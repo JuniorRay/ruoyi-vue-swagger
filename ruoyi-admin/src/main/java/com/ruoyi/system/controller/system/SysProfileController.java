@@ -4,8 +4,8 @@ import java.io.IOException;
 
 import com.ruoyi.common.core.domain.Response;
 import com.ruoyi.common.core.domain.ResponseEnum;
-import com.ruoyi.system.domain.dto.system.PersonInfoDTO;
-import com.ruoyi.system.domain.dto.system.UpdatePwdDTO;
+import com.ruoyi.system.dto.system.PersonInfoDTO;
+import com.ruoyi.system.dto.system.UpdatePwdDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

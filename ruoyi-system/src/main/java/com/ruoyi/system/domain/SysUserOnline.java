@@ -1,4 +1,4 @@
-package com.ruoyi.system.domain.bean;
+package com.ruoyi.system.domain;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

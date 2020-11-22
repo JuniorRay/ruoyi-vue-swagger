@@ -1,8 +1,8 @@
-package com.ruoyi.system.domain.dto.system;
+package com.ruoyi.system.dto.system;
 
 import com.ruoyi.common.core.domain.entity.SysRole;
 import com.ruoyi.common.core.domain.entity.SysUser;
-import com.ruoyi.system.domain.bean.SysPost;
+import com.ruoyi.system.domain.SysPost;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

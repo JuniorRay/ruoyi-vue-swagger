@@ -8,7 +8,7 @@ import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ruoyi.common.core.domain.Response;
-import com.ruoyi.system.domain.dto.system.CaptchaImageDTO;
+import com.ruoyi.system.dto.system.CaptchaImageDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

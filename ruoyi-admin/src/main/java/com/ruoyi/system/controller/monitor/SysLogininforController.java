@@ -12,7 +12,7 @@ import com.ruoyi.common.core.controller.BaseController;
 import com.ruoyi.common.core.page.ResponsePageInfo;
 import com.ruoyi.common.enums.BusinessTypeEnum;
 import com.ruoyi.common.utils.poi.ExcelUtil;
-import com.ruoyi.system.domain.bean.SysLogininfor;
+import com.ruoyi.system.domain.SysLogininfor;
 import com.ruoyi.system.service.ISysLogininforService;
 
 /**

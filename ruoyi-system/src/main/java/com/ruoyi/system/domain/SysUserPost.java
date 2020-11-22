@@ -1,4 +1,4 @@
-package com.ruoyi.system.domain.bean;
+package com.ruoyi.system.domain;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -7,21 +7,21 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * 用户和角色关联 sys_user_role
+ * 用户和岗位关联 sys_user_post
  *
  * @author ruoyi
  */
-@ApiModel(value = "SysUserRole", description = "用户和角色关联")
+@ApiModel(value = "SysUserPost", description = "用户和岗位关联")
 @Data
-public class SysUserRole
+public class SysUserPost
 {
     /** 用户ID */
     @ApiModelProperty(value = "用户ID")
     private Long userId;
 
-    /** 角色ID */
-    @ApiModelProperty(value = "角色ID")
-    private Long roleId;
+    /** 岗位ID */
+    @ApiModelProperty(value = "岗位ID")
+    private Long postId;
 
     public Long getUserId()
     {
@@ -33,21 +33,21 @@ public class SysUserRole
         this.userId = userId;
     }
 
-    public Long getRoleId()
+    public Long getPostId()
     {
-        return roleId;
+        return postId;
     }
 
-    public void setRoleId(Long roleId)
+    public void setPostId(Long postId)
     {
-        this.roleId = roleId;
+        this.postId = postId;
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
             .append("userId", getUserId())
-            .append("roleId", getRoleId())
+            .append("postId", getPostId())
             .toString();
     }
 }

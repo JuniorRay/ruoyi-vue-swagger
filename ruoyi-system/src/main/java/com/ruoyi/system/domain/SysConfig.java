@@ -1,4 +1,4 @@
-package com.ruoyi.system.domain.bean;
+package com.ruoyi.system.domain;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
