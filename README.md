@@ -1,7 +1,7 @@
 ## RuoYi-Vue-Swagger平台简介
 
 基于RuoYi-Vue基础上进行开发，原项目地址：https://gitee.com/y_project/RuoYi-Vue
-#### Junior重磅原创！！！新增zip包部署项目，解压后支持windows/linux脚本一键运行，彻底摆脱jar部署不好管理和增量更新以及排查问题难的传统方式
+#### 重磅！！！新增zip包部署项目，解压后支持windows/linux脚本一键运行，彻底摆脱jar部署不好管理和增量更新以及排查问题难的传统方式
 * 集成swagger-bootstrap-ui 打开地址：http://localhost:8080/doc.html
 * 改造所有返回值AjaxResult为Response让Swagger的@ApiModel识别（因为swagger不支持返回的hashMap和Json形式）
 * 改造系统返回DTO层，规范项目开发
