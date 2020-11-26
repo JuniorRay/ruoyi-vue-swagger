@@ -116,7 +116,7 @@ public class ${ClassName}Controller extends BaseController{
     @Log(title = "${functionName}", businessType = BusinessTypeEnum.DELETE)
 	@DeleteMapping("/{${pkColumn.javaField}s}")
     @ApiOperation("删除${functionName}")
-    public Response remove(
+    public  Response<Integer> remove(
             @ApiParam(name = "${pkColumn.javaField}s", value = "${functionName}ids参数", required = true)
             @PathVariable ${pkColumn.javaType}[] ${pkColumn.javaField}s
     ){

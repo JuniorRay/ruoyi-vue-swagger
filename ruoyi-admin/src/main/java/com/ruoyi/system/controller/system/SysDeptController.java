@@ -1,12 +1,17 @@
 package com.ruoyi.system.controller.system;
 
-import java.util.Iterator;
-import java.util.List;
-
+import com.ruoyi.common.annotation.Log;
+import com.ruoyi.common.constant.UserConstants;
+import com.ruoyi.common.core.controller.BaseController;
 import com.ruoyi.common.core.domain.Response;
 import com.ruoyi.common.core.domain.ResponseEnum;
 import com.ruoyi.common.core.domain.TreeSelect;
+import com.ruoyi.common.core.domain.entity.SysDept;
+import com.ruoyi.common.enums.BusinessTypeEnum;
+import com.ruoyi.common.utils.SecurityUtils;
+import com.ruoyi.common.utils.StringUtils;
 import com.ruoyi.system.dto.system.RoleDeptDTO;
+import com.ruoyi.system.service.ISysDeptService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -15,14 +20,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import com.ruoyi.common.annotation.Log;
-import com.ruoyi.common.constant.UserConstants;
-import com.ruoyi.common.core.controller.BaseController;
-import com.ruoyi.common.core.domain.entity.SysDept;
-import com.ruoyi.common.enums.BusinessTypeEnum;
-import com.ruoyi.common.utils.SecurityUtils;
-import com.ruoyi.common.utils.StringUtils;
-import com.ruoyi.system.service.ISysDeptService;
+
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * 部门信息

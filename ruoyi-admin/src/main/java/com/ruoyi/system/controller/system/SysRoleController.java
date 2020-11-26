@@ -52,7 +52,7 @@ public class SysRoleController extends BaseController
     @ApiOperation("查询角色信息列表")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "pageNum",value = "当前页码" ,dataType = "int", paramType = "query", required = false),
-            @ApiImplicitParam(name = "pageSize",value = "每页数据量" , dataType = "int", paramType = "query", required = false),
+            @ApiImplicitParam(name = "pageSize",value = "每页数据量" ,dataType = "int", paramType = "query", required = false),
     })
     public ResponsePageInfo<SysRole> list(@ModelAttribute SysRole role)
     {

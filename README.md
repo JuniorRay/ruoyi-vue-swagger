@@ -1,10 +1,12 @@
 ## RuoYi-Vue-Swagger平台简介
 
-* 基于RuoYi-Vue基础上进行开发，原项目地址：https://gitee.com/y_project/RuoYi-Vue
+基于RuoYi-Vue基础上进行开发，原项目地址：https://gitee.com/y_project/RuoYi-Vue
+#### Junior重磅原创！！！新增zip包部署项目，解压后支持windows/linux脚本一键运行，彻底摆脱jar部署不好管理和增量更新以及排查问题难的传统方式
 * 集成swagger-bootstrap-ui 打开地址：http://localhost:8080/doc.html
 * 改造所有返回值AjaxResult为Response让Swagger的@ApiModel识别（因为swagger不支持返回的hashMap和Json形式）
 * 改造系统返回DTO层，规范项目开发
 * 内嵌容器tomcat换成并发性能更好的undertow
+* 更便捷的zip包部署，支持windows和linux版本一键运行项目，同时也支持jar进行增量替换lib下的原有jar进行更新
 * 改造axios和controller交互，规范项目restful
 * 修改全局domain.vm模板和controller.vm模板，一键生成带swagger的增删改查全套代码
 * Response<T>直接返回结果和ResponsePageInfo<T>泛型分页代码生成更快速识别swagger
@@ -39,9 +41,44 @@
 16. 在线构建器：拖动表单元素生成相应的HTML代码。
 17. 连接池监视：监视当前系统数据库连接池状态，可进行分析SQL找出系统性能瓶颈。
 
+## 在线体验
+
+- admin/admin123  
+
+原官方演示地址（仅供参考）：http://vue.ruoyi.vip  
+原官方文档地址（仅供参考）：http://doc.ruoyi.vip
+~~~
+com.ruoyi 
+├──ruoyi-admin              //web服务入口Controller管理模块（业务表生成的Controller层代码可以放在这里的project包下面）
+│    │    └──project                //这里写你的项目业务代码Controller
+│    │    └──system                 //系统自带Controller
+│    │    └──启动类          //springboot项目启动类（默认启动地址http://localhost:8080）
+│    ├──install.sh               //linux环境下部署运行的脚本，运行后会把项目注册成系统级服务（当kill掉会自动重启，保证服务高可用存活），
+│    │                           //如果执行生成的start.sh和stop.sh在服务器上面存在两个“？？”的符号。需要自己文件手动重命名去掉。注册好后可以service junior-server start 启动项目！！！
+│    ├──remove.sh                //linux环境下移除部署运行的脚本,会删掉注册好的系统级服务，即service junior-server start ,service junior-server stop...(status,restart)等命令失效
+│    ├──start.bat                //windows 下的项目部署启动脚本
+├──ruoyi-common             //通用模块（通用工具类等）
+├──ruoyi-framework          //框架核心模块（包含redis，druid，Log等）
+├──ruoyi-generator          //代码生成器模块
+├──ruoyi-quartz             //定时任务模块
+├──ruoyi-system             //系统模块（javaBean,mapper,service等逻辑的模块，业务表生成的代码（除了controller）都可以放在这里的project包下面）
+│         └──project                //这里写你的项目业务相关代码（除了Controller之外）
+│         └──system                 //系统自带功能
+├──ruoyi-ui                 //前端项目Vue工程（默认启动地址http://localhost:81）
+├──doc                      //说明文档文件夹
+├──sql                      //sql脚本文件夹 
+│   └──create_db.sql                //生成数据库和用户
+│   └──create_business.sql          //用于存放你们自己业务表的sql
+│   └──quartz.sql                   //用于存放定时任务sql
+│   └──ry_20201021.sql              //系统基本表自带的sql
+├──pom.xml                  //项目整体依赖
+
+~~~
 
 ## 代码生成功能
-### PS:本次以sys_config举例，实际项目中不要去生成系统自带的sys_开头的表，否则启动不了
+
+### PS:本次以sys_config举例，实际项目中不要去生成系统自带的sys_开头的表，否则启动不了，因为代码模板不一样，有细微区别
+
 1.启动ruoyi-ui 然后进入菜单——>系统工具——>代码生成（前提是数据库已经把业务的表导入进去了）
 
 ![Image text](doc/gen-index.jpg)
@@ -67,35 +104,7 @@
 
 ![Image text](doc/gen-zip.jpg)
 
-## 在线体验
 
-- admin/admin123  
-
-演示地址：http://vue.ruoyi.vip  
-文档地址：http://doc.ruoyi.vip
-~~~
-com.ruoyi 
-├──ruoyi-admin              //web服务入口Controller管理模块（业务表生成的Controller层代码可以放在这里的project包下面）
-│         └──project        //这里写你的项目业务代码Controller
-│         └──system         //系统自带Controller
-│         └──启动类          //springboot项目启动类（默认启动地址http://localhost:8080）
-├──ruoyi-common             //通用模块（通用工具类等）
-├──ruoyi-framework          //框架核心模块（包含redis，druid，Log等）
-├──ruoyi-generator          //代码生成器模块
-├──ruoyi-quartz             //定时任务模块
-├──ruoyi-system             //系统模块（javaBean,mapper,service等逻辑的模块，业务表生成的代码（除了controller）都可以放在这里的project包下面）
-│         └──project        //这里写你的项目业务相关代码（除了Controller之外）
-│         └──system         //系统自带功能
-├──ruoyi-ui                 //前端项目Vue工程（默认启动地址http://localhost:81）
-├──bin                      //服务器脚本文件夹
-├──doc                      //说明文档文件夹
-├──sql                      //sql脚本文件夹 
-│   └──create_db.sql        //生成数据库和用户
-│   └──create_business.sql  //用于存放你们自己业务表的sql
-│   └──quartz.sql           //用于存放定时任务sql
-│   └──ry_20201021.sql      //系统基本表自带的sql
-├──pom.xml                  //项目整体依赖
-~~~
 ## 演示图
 ![Image text](doc/doc-show.png)
 
@@ -266,7 +275,7 @@ public class SysDeptController extends BaseController{
     @Log(title = "部门", businessType = BusinessTypeEnum.DELETE)
 	@DeleteMapping("/{deptIds}")
     @ApiOperation("删除部门")
-    public Response remove(
+    public  Response<Integer> remove(
             @ApiParam(name = "deptIds", value = "部门ids参数", required = true)
             @PathVariable Long[] deptIds
     ){
@@ -698,3 +707,53 @@ export default {
 
 ```
 
+## 项目部署以及遇到的问题：（zip包全量部署，jar包增量更新部署）
+
+1.在项目的根目录pom进行打包（注意根目录root）,先clean,然后package
+
+![Image text](doc/release/maven.png)
+
+2.然后会在ruoyi-admin的项目下面target生成两个文件（zip为首次全量部署，解压到服务器上就可以脚本运行；jar为增量更新服务器上面解压后的zip里面的lib文件下面的jar进行增量覆盖更新，注意jar不要重复！！！）
+
+![Image text](doc/release/file.png)
+
+3.window上，可以在解压后的文件夹下双击start.bat启动
+
+![Image text](doc/release/window-run.jpg)
+
+4.linux上，解压后到/opt/junior-server/ 下，根目录会有一个install.sh ，通过linux命令运行将会注册成服务
+
+![Image text](doc/release/linux-run.jpg)
+
+5.运行sudo sh install.sh后该目录下面会生成两个脚本，start.sh和stop.sh
+
+![Image text](doc/release/create-shell.jpg)
+
+ 如果执行生成的start.sh和stop.sh在服务器上面存在两个“？？”的符号。需要自己文件手动重命名去掉。注册好后可以service junior-server start 启动项目！！！
+
+![Image text](doc/release/create.jpg)
+
+6.关于运行install.sh时出现如下报错‘/r command not found’
+
+![Image text](doc/release/run-error.jpg)
+
+shell脚本执行错误 $'\r':command not found
+ 存现这种错误是因为 编写的  shell脚本是在win下编写的，每行结尾是\r\n 的Unix 结果行是\n  所以在Linux下运行脚本 会任务\r 是一个字符，所以运行错误，需要把文件转换下
+方法一、
+sed -i 's/\r//' 脚本名
+方法二、
+yum -y install dos2unix
+dos2unix  脚本名
+
+7.服务注册好之后即可注册成系统级服务，可以宕机自动重启，命令如下
+````
+service junior-server start 运行服务
+service junior-server stop 停止服务
+service junior-server restart 重启服务
+service junior-server status 查看服务状态
+````
+此处以eyes-server举例，该脚手架中换成junior-server
+
+![Image text](doc/release/eyes.jpg)
+
+8.关于增量部署，直接替换/opt/junior-server/lib下面的ruoyi-admin-3.20.jar，注意旧版本jar要删除，否则新jar找不到！！！
