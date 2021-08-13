@@ -108,6 +108,7 @@ public class CommonController
      * 本地资源通用下载
      */
     @GetMapping("/common/download/resource")
+    @ApiOperation("本地资源通用下载")
     public void resourceDownload(
             @ApiParam(name = "name", value = "文件名称")
             @RequestParam(name = "name", required = true) String name,
